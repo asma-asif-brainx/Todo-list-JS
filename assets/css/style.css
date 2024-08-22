@@ -1,0 +1,77 @@
+.main-container{
+    background-color:  #2c84a4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 600px;
+    height: 100%;
+    font-family: Verdana;
+}
+.todo-container{
+    background-color:white;
+    color: white;
+    max-width: 800px;
+    width: 100%;
+    padding: 2px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: auto;
+}
+.input-container{
+    font-size: 12px;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+.to-do-head{
+    font-size: 25px;
+    color: brown;
+}
+.line-break{
+    max-width: 80%;
+    width: 100%;
+    border-color:rgb(228, 226, 246); border-style:solid;
+}
+#add-task{
+    min-width: 500px;
+    width: 100%;
+    min-height: 30px ;
+    height: 100%;
+}
+#submit-task{
+    max-width: 100px;
+    width: 100%;
+    min-height: 35px;
+    height: 100%;
+}
+.tasks-list{
+    color: black;
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+.todo-list{
+    max-width: 300px ;
+    width: 100%;
+}
+.completed{
+    text-decoration: line-through;
+}
+.edit{
+    background-color: black;
+    color: white;
+}
+.delete{
+    display: flex;
+}
+.task-input[readonly] {
+    background-color: #f8b6b6; 
+    border: none;
+    color: #333; 
+}
+.task-input{
+    background-color: brown;
+    color: white;
+}
