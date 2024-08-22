@@ -1,10 +1,21 @@
 document.addEventListener("DOMContentLoaded", function() {
-    document.getElementById('submit-task').addEventListener('click', function() {
-        const taskInput = document.getElementById('add-task');
+    const taskInput = document.getElementById('add-task');
+    const submitButton = document.getElementById('submit-task');
+    
+    function handleAddTask() {
         const taskText = taskInput.value.trim();
         if (taskText) {
             addTask(taskText);
-            taskInput.value = ''; 
+            taskInput.value = '';
+        }
+    }
+
+    submitButton.addEventListener('click', handleAddTask);
+
+    taskInput.addEventListener('keydown', function(event) {
+        if (event.key === 'Enter') {
+            event.preventDefault(); 
+            handleAddTask();
         }
     });
 });
@@ -46,16 +57,30 @@ function addTask(taskText) {
             inputField.focus(); 
             editButton.textContent = 'Save'; 
         } else {
-            const newTaskText = inputField.value.trim();
-            if (newTaskText) {
-                span.textContent = newTaskText;
-                inputField.value = newTaskText;
-            }
-            span.style.display = 'inline'; 
-            inputField.style.display = 'none'; 
-            editButton.textContent = 'Edit'; 
+            saveEdit();
         }
     });
+
+    inputField.addEventListener('keydown', function(event) {
+        if (event.key === 'Enter') {
+            event.preventDefault(); 
+            saveEdit();
+        }
+    });
+
+
+    function saveEdit() {
+    const newTaskText = inputField.value.trim();
+    if (newTaskText) {
+        span.textContent = newTaskText;
+        inputField.value = newTaskText;
+    }
+    span.style.display = 'inline'; 
+    inputField.style.display = 'none'; 
+    editButton.textContent = 'Edit'; 
+}
+
+
 
     const deleteButton = document.createElement('button');
     deleteButton.textContent = 'Delete';
