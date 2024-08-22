@@ -50,7 +50,7 @@
     list-style: none;
     display: flex;
     flex-direction: row;
-    gap: 10px;
+    gap: 20px;
 }
 .todo-list{
     max-width: 300px ;
@@ -62,9 +62,16 @@
 .edit{
     background-color: black;
     color: white;
+    min-width: 100px;
+    width: 100%;
+    min-height: 35px;
+    height: 100%;
 }
 .delete{
-    display: flex;
+    min-width: 100px;
+    width: 100%;
+    min-height: 35px;
+    height: 100%;
 }
 .task-input[readonly] {
     background-color: #f8b6b6; 
@@ -74,4 +81,10 @@
 .task-input{
     background-color: brown;
     color: white;
+}
+.task-text{
+    min-width: 148px;
+    width: 100%;
+    max-height: 35px;
+    height: 100%;
 }
