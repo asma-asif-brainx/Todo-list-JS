@@ -73,14 +73,9 @@
     min-height: 35px;
     height: 100%;
 }
-.task-input[readonly] {
-    background-color: #f8b6b6; 
-    border: none;
-    color: #333; 
-}
 .task-input{
-    background-color: brown;
-    color: white;
+    background-color: rgb(225, 219, 201);
+    color: rgb(44, 43, 43);
 }
 .task-text{
     min-width: 148px;
